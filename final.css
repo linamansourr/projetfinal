@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Roboto:ital,wght@1,100&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat' , sans-serif;
+    
+}
+/*NavBar*/
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid red;
+    
+}
+
+nav h1{
+    color: red;
+    font-family: 'Playfair Display' , sans-serif ;
+    font-size: 30px;
+}
+
+
+nav .onglets{
+    margin-top: 3px;
+    margin-left: 300px;
+}
+
+
+nav .onglets a {
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+    border-bottom: 1px , solid black;
+    padding-bottom: 5px;
+    
+}
+/*Header*/
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('https://images.unsplash.com/photo-1556901600-3e1be0aa443e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1814&q=80');
+    background-size: cover;
+    padding: 178px;
+    border-bottom: 5px solid red;
+    background-color: black;
+    
+}
+
+header h1{
+    font-family: 'Playfair Display' , sans-serif ;
+
+ 
+}
+
+header h4{
+    
+    margin-top: -20px;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px black;
+ 
+}
+
+header button{
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 15px;
+    font-family: 'Playfair Display' , sans-serif ;
+    cursor: pointer;
+
+
+}
+
+.main{
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    
+}
+/*Carroussl*/
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+.slide{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.slider img{
+    max-width: 100%;
+    display: none;
+}
+img.active{
+    display: block;
+    animation:fade 0.8s;
+
+}
+@keyframes fade {
+    from {
+    opacity: 0;}
+to{
+    opacity: 1;
+}
+    
+}
+
+.slide-btn{
+    width: 100%;
+  height: auto;
+  border: 1px solid #000;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+}
+
+.btn-slider{
+    font-size: 50px;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+/* Contact Section */
+.contact{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
+}
+
+.contact:after{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-size: cover;
+	filter: blur(50px);
+	z-index: -1;
+}
+.contact-box{
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+}
+
+.gauche{
+	background: url("https://images.unsplash.com/photo-1597466981220-da53ce278302?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=375&q=80") no-repeat center;
+	background-size: cover;
+	height: 100%;
+}
+
+.droite{
+	padding: 25px 40px;
+}
+
+h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: rgb(19, 125, 211);
+}
+
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea{
+	min-height: 150px;
+}
+
+.btn-contact{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: rgb(19, 125, 211);
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.btn-contact:hover{
+    background-color: #27ae60;
+}
+
+.field:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+}
+
+/* About Section */
+.contact{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
+}
+
+.contact:after{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-size: cover;
+	filter: blur(50px);
+	z-index: -1;
+}
+.contact-box{
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+}
+
+.left{
+	background: url("https://www.coe.int/documents/11046033/0/tunisie-drapeau-870.jpg/b1c5cb7c-d1d3-e9eb-f458-a014f99d258d") no-repeat center;
+	background-size: cover;
+	height: 100%;
+}
+
+.droite{
+	padding: 25px 40px;
+}
+
+h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: rgb(19, 125, 211);
+}
+
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea{
+	min-height: 150px;
+}
+
+.btn-contact{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: rgb(19, 125, 211);
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.btn-contact:hover{
+    background-color: rgb(19, 125, 211);
+}
+
+.field:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+
+/*Visit*/
+.visit{
+	position: relative;
+   background-color: red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
+}
+
+.visit:after{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-size: cover;
+	filter: blur(50px);
+	z-index: -1;
+}
+.visit-box{
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+}
+
+.gauche_visit{
+
+	height: 100%;
+}
+
+.droite_visit{
+	padding: 25px 40px;
+}
+
+h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: rgb(19, 125, 211);
+}
+
+
+.btn-visit{
+	
+	padding: 0.5rem 1rem;
+	background-color: rgb(19, 125, 211);
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.btn-visit:hover{
+    background-color: #27ae60;
+}
+
+
+/* Footer Section */
+
+.footer{
+    background-color: rgb(19, 125, 211);
+    padding: 70px 0;
+}
+.foot{
+    max-width: 1170px;
+	margin:auto;
+}
+.foots{
+    display: flex;
+	flex-wrap: wrap;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+ }
+ .footer-col h4{
+     font-size: 18px;
+     color: #ffffff;
+     text-transform: capitalize;
+     margin-bottom: 35px;
+     font-weight: 500;
+     position: relative;
+ }
+ .footer-col h4::before{
+     content: '';
+     position: absolute;
+     left:0;
+     bottom: -10px;
+     background-color: red;
+     height: 2px;
+     box-sizing: border-box;
+     width: 50px;
+ }
+ .footer-col ul li:not(:last-child){
+     margin-bottom: 10px;
+ }
+ .footer-col ul li a{
+     font-size: 16px;
+     text-transform: capitalize;
+     color: #ffffff;
+     text-decoration: none;
+     font-weight: 300;
+     color: #bbbbbb;
+     display: block;
+     transition: all 0.3s ease;
+ }
+ .footer-col ul li a:hover{
+     color: #ffffff;
+     padding-left: 8px;
+ }
+ .footer-col .social-links a{
+     display: inline-block;
+     height: 40px;
+     width: 40px;
+     background-color: rgba(255,255,255,0.2);
+     margin:0 10px 10px 0;
+     text-align: center;
+     line-height: 40px;
+     border-radius: 50%;
+     color: #ffffff;
+     transition: all 0.5s ease;
+ }
+ .footer-col .social-links a:hover{
+     color: #24262b;
+     background-color: #ffffff;
+ }
+ 
+ /*responsive*/
+ @media(max-width: 767px){
+   .footer-col{
+     width: 50%;
+     margin-bottom: 30px;
+ }
+ }
+ @media(max-width: 574px){
+   .footer-col{
+     width: 100%;
+ }
+ }
+
+
+
+@media screen and (max-width:680px) {
+    nav .onglets{
+        margin-left: 0px;
+        margin-bottom: 20px;
+
+    }
+    
+}
+.carousel-inner{
+    
+    justify-content: center;
+    text-align: center;
+    font-family: 'Montserrat' , sans-serif;
+}
+.discover{
+    background-color:rgb(19, 125, 211) ;
+}
+
